@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+  /* Padding and border are included in the element's total width and height */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  font-weight: bold;
+}
+
+html {
+  height: 100%;
+  background: rgb(175, 168, 168);
+  background: radial-gradient(circle, rgb(168, 235, 209) 20%, rgb(110, 104, 104));
+  background-size: cover;
+}
+
+#calculator {
+  width: 325px;
+  height:auto;
+
+  margin: 100px auto;
+  padding: 20px 20px 9PX;
+
+  background: rgb(245, 191, 191);
+  background: linear-gradient(rgb(0, 0, 0), rgb(145, 139, 139));
+  border-radius: 3px;
+  /* Using box shadows to create 3D effects */
+  box-shadow: 0px 4px #c2c4c5, 0px 10px 15px rgba(156, 147, 147, 0.2);
+}
+
+#screen {
+  float: right;
+
+  height: 40px;
+  width: 212px;
+
+  padding: 0 10px;
+
+  background: rgba(255, 255, 255, 0.295);
+  border-radius: 3px;
+  /* Inset shadow on the screen to create indent */
+  box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+
+  /* Typography */
+  font-size: 17px;
+  line-height: 40px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+/* Clear Floats to make sure #calculator includes them correctly */
+.keys, .top {
+  overflow: hidden;
+}
+
+/* Applying css on all the keys */
+.keys span, #clear {
+  float: left;
+  position: relative;
+  top: 0;
+  /* Specifies the type of cursor to be displayed when pointing on an element. */
+  cursor: pointer;
+
+  width: 66px;
+  height: 36px;
+
+  background: rgb(241, 240, 240);
+  border-radius: 3px;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+
+  margin: 0 7px 11px 0;
+
+  color: rgb(2, 2, 2);
+  line-height: 36px;
+  text-align: center;
+
+  /* prevent selection of text inside keys */
+  user-select: none;
+
+  /* Transitions allows you to change property values smoothly  */
+  transition: all 0.2s ease;
+}
+
+.keys span.operator {
+  background: #FFF0F5;
+  margin-right: 0; /* 7px in previous setting*/
+}
+
+/* Eval Button */
+.keys span.eval {
+  background: #2a0591;
+  box-shadow: 0px 4px #a79ce9;
+  color: #ececee;
+}
+
+.keys span.eval:hover {
+  background: #27738a;
+  box-shadow: 0px 4px #2c596b;
+  color: #ffffff;
+}
+
+.keys span.eval:active {
+  box-shadow: 0px 0px #245069;
+  top: 4px;
+}
+
+/* Clear Button */
+#clear {
+  background: #d80c0c;
+  box-shadow: 0px 4px #e9cca1;
+  color: white;
+}
+
+#clear:hover {
+  background: #f34c4c;
+  box-shadow: 0px 4px #deb19c;
+  color: white;
+}
+
+#clear:active {
+  top: 4px;
+  box-shadow: 0px 0px #d3545d;
+}
+
+/* Other Buttons */
+.keys span:hover {
+  background: rgb(142, 148, 151);
+  box-shadow: 0px 4px #a2b8f5;
+  color: rgb(252, 252, 252);
+}
+
+.keys span:active {
+  box-shadow: 0px 0px #080808;
+  top: 4px;
+}
